@@ -21,3 +21,7 @@ Durante los siguientes días vamos a construir un blog para el bootcamp, por lo 
 * Deberá existir una marcación clara de dónde se presentará información variable (títulos de publicaciones, imágenes, autores, fechas...).
 
 * No se recomienda agregar más información de la que actualmente está solicitada. (apéguense a la definición.)
+
+## Referencias:
+
+https://www.terlici.com/2014/08/25/best-practices-express-structure.html
