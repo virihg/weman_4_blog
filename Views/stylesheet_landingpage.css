@@ -1,0 +1,66 @@
+
+#title{
+  float: left;
+  color:#2468B6;
+  font-size: 20px;
+  font-family:Helvetica, sans-serif;
+}
+#logo_user{
+  float: left;
+}
+#logo_weman{
+  float: left;
+}
+#header{
+  width: 100%;
+
+}
+nav{
+  width: 100%;
+  height: 120px;
+  background-color:#E1E4E8;
+  border: 3px solid #2468B6;
+}
+#logo_user{
+  float: right;
+}
+.entry-notice{
+  width: 80%;
+  height: 190px;
+  background-color:#E1E4E8;
+  border: 3px solid #2468B6;
+  margin: 20px 100px 20px 100px;
+  padding: 7px 2px 0px 7px;
+}
+.title-date{
+  overflow: auto;
+}
+.title-notice{
+  float: left;
+  color:#2468B6;
+  font-family:Helvetica, sans-serif;
+  margin: 0px 0px 0px 0px;
+}
+.date{
+  color:#2468B6;
+  font-family:Helvetica, sans-serif;
+  margin: 0px 0px 0px 0px;
+}
+.image-notice{
+  float:right;
+}
+.text-notice{
+  text-align: left;
+  color:#2468B6;
+  font-family:Helvetica, sans-serif;
+  font-size: 15px;
+}
+.resaltado{
+  color: red;
+}
+.auth-notice{
+  float: right;
+  color:#2468B6;
+  font-family:Helvetica, sans-serif;
+  margin-right: 5px;
+}
