@@ -20,7 +20,7 @@
 				}
 			}
 			function inicia() {
-				dibuja();
+				//dibuja();
 			}
 		</script>
 	</head>
@@ -36,6 +36,20 @@
 				<a href="#"><li>Entrar</li></a>
 		</nav>
 		<!-- /navegación -->
+		<!-- Formulario de pruebas -->
+		<form id="frmLogin" method="post" action="./login">
+			<input type="text" name="usr" placeholder="Nombre del usuario" />
+			<input type="password" name="pwd" placeholder="Contraseña" />
+			<input type="submit" name="hazmagia" value="Valida!">
+		</form>
+		<br>
+		<form id="frmPublica" method="post" action="./publica">
+			<input type="hidden" name="idusr" value = "1" />
+			<input type="text" name="titulo" placeholder="Título del comentario" />
+			<textarea name="texto" cols="30" rows="5"></textarea>
+			<input type="submit" name="hazmagia" value="xikmaka!">
+		</form>
+
 		<!-- Luego hay un contenedor grande donde van las publicaciones -->
 		<section id="cont_comentarios"></section>
 		<!-- La publicación la haría en un script que se repita varias veces como demo -->
