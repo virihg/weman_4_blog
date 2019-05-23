@@ -25,15 +25,17 @@ nav{
   float: right;
 }
 .entry-notice{
-  width: 80%;
-  height: 190px;
+  max-width: 70%;
+  height: 170px;
   background-color:#E1E4E8;
   border: 3px solid #2468B6;
-  margin: 20px 100px 20px 100px;
+  margin: 20px 100px 20px 200px;
   padding: 7px 2px 0px 7px;
 }
 .title-date{
   overflow: auto;
+  max-width: 60%;
+  float: left;
 }
 .title-notice{
   float: left;
@@ -44,16 +46,22 @@ nav{
 .date{
   color:#2468B6;
   font-family:Helvetica, sans-serif;
-  margin: 0px 0px 0px 0px;
+  margin: 5px 0px 0px 440px;
+  float: right;
 }
 .image-notice{
   float:right;
+}
+img.image-notice{
+  max-width: 100%;
+  height: auto;
 }
 .text-notice{
   text-align: left;
   color:#2468B6;
   font-family:Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 0.8vw;
+  float: left;
 }
 .resaltado{
   color: red;
@@ -63,4 +71,9 @@ nav{
   color:#2468B6;
   font-family:Helvetica, sans-serif;
   margin-right: 5px;
+  margin: 65px;
 }
+/* Media query */
+@media screen and (max-width: 800px) {
+  .entry-notice, .title-date, .title-notice, .date, .image-notice, .text-notice, .auth-notice {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
