@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Firmado</title>
+    <title>Usuario firmado</title>
     <link rel="stylesheet" href="stylesheets.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body>
       <header>
@@ -13,33 +14,31 @@
             <span id="logo_weman"><img src="./images/gato_logo.png" alt="logo de gato"></span>
             <span id="title"><h1>Weman Connect</h1></span>
             <div id="logo_user">
+              <span><img src="./images/share.png" alt="icono share"></span>
               <span><img src="./images/user_logo.png" alt="logo de usuario generico"></span>
             </div>
           </nav>
         </div>
       </header>
-      <div class="sing-in">
+      <div class="new-entry">
         <table>
           <tr>
-            <td class="email-form" colspan="2"align="center">Correo electónico</td>
+            <thead class="title-new-entry" colspan="4">
+              Publicar entrada nueva
+            </thead>
           </tr>
           <tr>
-            <td colspan="2"><input type="text" name="email" value="" placeholder="Lorem ipsum"></td>
+            <td colspan="3"><input type="text" name="title-entry" value="" placeholder="Titulo de la entrada"></td>
+            <td><button type="button" name="button-new-entry" class="button-new-entry">Publicar</button> </td>
           </tr>
           <tr>
-            <td class="password-form" colspan="2" align="center">
-              Contraseña
+            <td colspan="3"><textarea name="text-new-entry" class="text-new-entry" rows="8" cols="80" placeholder="Contenido"></textarea> </td>
+            <td>
+              <i class="fa fa-camera fa-2x"></i>
+              <p>Upload image</p>
             </td>
           </tr>
-          <tr>
-            <td colspan="2"><input type="text" name="password" value="" placeholder="Lorem ipsum"></td>
-          </tr>
-          <tr id="box-form">
-            <td align="Left"><button type="button" name="button-form" class="button-form" id="form1">Olvidé mi<br>contraseña</button></td>
-            <td align="Right"><button type="button" name="button-form" class="button-form" id="form2">Entrar</button> </td>
-          </tr>
         </table>
-
       </div>
       <section>
           <div class="entry-notice" id=el1 >
