@@ -1,0 +1,31 @@
+{
+  "name": "weman_4_blog",
+  "version": "1.0.0",
+  "description": "Ejercicio de módulos de front end",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+	  "start": "node10 app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fareden/weman_4_blog.git"
+  },
+  "keywords": [
+    "wemanconnect",
+    "practicas"
+  ],
+  "author": "Horus S. Rico",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fareden/weman_4_blog/issues"
+  },
+  "homepage": "https://github.com/fareden/weman_4_blog#readme"
+}
