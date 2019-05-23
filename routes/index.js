@@ -17,18 +17,21 @@ router.get('/', (pet, resp) => {
 
 router.get('/comentarios', (pet, resp) => {
 	//Aquí vamos a enviar los comentarios en formato JSON. Lo haremos de manera asíncrona.
-	lc.leeComentarios();
 	//Esperar el asíncrono...
-	resp.json(lc.retval);
+	let res = lc.leeComentarios(resp);
+	/*
+	console.log("Termina la ejecución de la función y dijo: ");
+	console.log(res);
+	resp.json(res);
+*/
 });
 
 router.post('/login', (pet, resp) => {
 	//Vamos a hacer la petición de entrada aquí...
-	let res = seg.valida(pet.usr, pet.pwd);
-	resp.json(res);
+	let res = seg.valida(pet.usr, pet.pwd, resp);
 });
 
-router.pst('/publica', (pet, resp) => {
+router.post('/publica', (pet, resp) => {
 	let res = lc.publicaComentario(pet.idusr, pet.titulo, pet.contenido, pet.archivo);
 	resp.json(res);
 });
