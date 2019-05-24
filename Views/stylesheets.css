@@ -106,6 +106,23 @@ img.image-notice{
   margin-right: -75px;
   padding-top: 3px;
 }
+.new-entry{
+  position:absolute;
+  z-index:3;
+  left:53em;
+  top:95px;
+  background-color:#E1E4E8;
+  border: 3px solid #2468B6;
+  color:#2468B6;
+  font-family:Helvetica, sans-serif;
+  width: 50%;
+}
+.title-new-entry{
+  font-weight: bold;
+  font-family:Helvetica, sans-serif;
+  font-size: 1.5vw;
+  margin:28px 0px 18px  15px;
+}
 /* Media query */
 @media screen and (max-width: 800px) {
   .entry-notice, .title-date, .title-notice, .date, .image-notice, .text-notice, .auth-notice {

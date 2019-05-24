@@ -10,7 +10,7 @@ const seg = require('../middlewares/cancervero.js');
  * @brief Obtiene por default el index.html de la aplicación
  */
 router.get('/', (pet, resp) => {
-	const ppal = fs.readFileSync(appDir + '/views/index.html').toString('utf8');
+	const ppal = fs.readFileSync(appDir + '/Views/langding_page.html').toString('utf8');
 	//Regresamos la página principal...
 	resp.send(ppal);
 });
