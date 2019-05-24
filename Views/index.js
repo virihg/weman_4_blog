@@ -5,6 +5,13 @@ function peticionAsync(tipo, url, parametros) {
 			if (ajax.status == 200) {
 				//El resultado es exitoso!
 				//Tomar las acciones necesarias aquí
+        let resp = JSON.parse(ajax.response);
+        if (resp.error == "0") {
+          if (url === '/comentarios') {
+            dibujaPublicaciones(resp.registros);
+          }
+
+        }
 			} else if (ajax.status == 404) {
 				//No encontró el servicio o API
 			} else {
@@ -21,7 +28,7 @@ function peticionAsync(tipo, url, parametros) {
 	ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	//La función encodeURI se encarga que la petición tenga el formato adecuado para ser enviado...
 	//un ejemplo de petición puede ser variable=valor&otravariable=otrovalor...
-	ajax.send(encodeURI(peticion));
+	ajax.send(encodeURI(parametros));
 }
 
 function leerPublicaciones(){
@@ -29,8 +36,23 @@ function leerPublicaciones(){
 }
 
 function dibujaPublicaciones(publis){
+  let contenedor = document.getElementById('notices');
   for(let i = 0; i < publis.length; i++){
     let  nuevaPublicacion = '<div class="entry-notice" id="el'+publis[i].id+'">'+
+      '<div class="title-date">\
+          <h2 class="title-notice">'+publis[i].titulo+'</h2>\
+          <p class="date">'+publis[i].momento+'</p>\
+       </div>\
+       <div class="image-notice">\
+        <img src="./images/img1.png" alt="Una imagen">\
+       </div>\
+       <div class="text-notice">\
+       <p>'+publis[i].contenido+'</p>\
+       </div>\
+       <div class="auth-notice">\
+       <p>'+publis[i].idusuario+'</p>\
+       </div></div>';
+       contenedor.innerHTML += nuevaPublicacion;
   }
 }
 //for (let laPublicacion : publis){
