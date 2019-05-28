@@ -9,9 +9,14 @@ function peticionAsync(tipo, url, parametros) {
         if (resp.error == "0") {
           if (url === '/comentarios') {
             dibujaPublicaciones(resp.registros);
+          } else if (url === '/login') {
+						alert("Bienvenido: " + resp.nombre);
+          //}else (resp.error == "1") {
+						//alert("Error de credenciales");
           }
-
-        }
+        }else {
+					alert("Error de credenciales");
+				}
 			} else if (ajax.status == 404) {
 				//No encontró el servicio o API
 			} else {
@@ -31,8 +36,21 @@ function peticionAsync(tipo, url, parametros) {
 	ajax.send(encodeURI(parametros));
 }
 
+function register_visibility(id) {
+	var element_sign = document.getElementById('login')
+	if(element_sign.style.display == 'block')
+          element_sign.style.display = 'none';
+       else
+          element_sign.style.display = 'block';
+    }
+
 function leerPublicaciones(){
   peticionAsync("GET", "/comentarios", "")
+};
+function login() {
+	var formulario = document.getElementById('form-login');
+	peticionAsync('POST','/login', 'usr=' + formulario.email.value + '&pwd=' + formulario.password.value);
+
 }
 
 function dibujaPublicaciones(publis){

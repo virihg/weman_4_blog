@@ -11,14 +11,41 @@
       <header>
         <div class="container" id="header">
           <nav id="menu">
-            <span id="logo_weman"><img src="./images/gato_logo.png" alt="logo de gato"></span>
+            <span id="logo_weman">
+              <img src="./images/gato_logo.png" alt="logo de gato"></span>
             <span id="title"><h1>Weman Connect</h1></span>
             <div id="logo_user">
-              <span><img src="./images/user_logo.png" alt="logo de usuario generico"></span>
+                <a href="#" role="button" onclick="register_visibility(login)">
+                <img src="./images/user_logo.png" alt="logo de usuario generico">
+                </a>
             </div>
           </nav>
         </div>
       </header>
+      <div class="sing-in" id="login">
+        <form id="form-login" action="/login" method="post">
+          <table>
+            <tr>
+              <td class="email-form" colspan="2"align="center">Correo electónico</td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="text" name="email" value="" placeholder="Lorem ipsum"></td>
+            </tr>
+            <tr>
+              <td class="password-form" colspan="2" align="center">
+                Contraseña
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="password" name="password" value="" placeholder="Lorem ipsum"></td>
+            </tr>
+            <tr id="box-form">
+              <td align="Left"><button type="button" name="button-form" class="button-form" id="form1">Olvidé mi<br>contraseña</button></td>
+              <td align="Right"><button type="button" name="button-form" class="button-form" id="form2" onclick="login()">Entrar</button> </td>
+            </tr>
+          </table>
+          </form>
+      </div>
       <section id="notices">
 
       </section>
